@@ -164,3 +164,28 @@
     transform: translateY(0);
   }
 }
+
+/* ── Mobile-specific fixes ───────────────────────────── */
+@media (max-width: 479px) {
+  .xs\:flex-row { flex-direction: row; }
+}
+
+/* Prevent horizontal overflow on all screens */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure nav height doesn't squash content below on mobile */
+@media (max-width: 767px) {
+  #top {
+    padding-top: 4rem;
+  }
+}
+
+/* Tighter hero headline on very small screens */
+@media (max-width: 360px) {
+  h1.font-display {
+    font-size: 2rem;
+  }
+}

@@ -18,25 +18,25 @@ const reviews = [
 
 export function Testimonials() {
   return (
-    <section className="py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="reveal max-w-3xl">
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-4 sm:mb-6">
             <span className="h-px w-10 bg-ember" />
             <span className="font-mono text-xs uppercase tracking-[0.4em] text-ember">
               Client Voices
             </span>
           </div>
-          <h2 className="font-display text-5xl md:text-6xl uppercase">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl uppercase">
             Trusted Where It <br /><span className="text-ember">Matters Most</span>
           </h2>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
+        <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {reviews.map((r) => (
             <article
               key={r.n}
-              className="reveal glass rounded-2xl p-8 flex flex-col hover:-translate-y-1 transition-transform"
+              className="reveal glass rounded-2xl p-6 sm:p-8 flex flex-col hover:-translate-y-1 transition-transform"
             >
               <div className="flex gap-1 text-ember">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -45,18 +45,16 @@ export function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/90">
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-foreground/90">
                 "{r.q}"
               </p>
-              <div className="mt-8 pt-6 border-t border-border flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-gradient-ember font-display text-xl flex items-center justify-center text-primary-foreground shadow-ember">
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-border flex items-center gap-3 sm:gap-4">
+                <div className="h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 rounded-full bg-gradient-ember font-display text-lg sm:text-xl flex items-center justify-center text-primary-foreground shadow-ember">
                   {r.n[0]}
                 </div>
                 <div>
-                  <div className="font-display text-base uppercase">{r.n}</div>
-                  <div className="text-xs font-mono text-muted-foreground">
-                    {r.r}
-                  </div>
+                  <div className="font-display text-sm sm:text-base uppercase">{r.n}</div>
+                  <div className="text-xs font-mono text-muted-foreground">{r.r}</div>
                 </div>
               </div>
             </article>

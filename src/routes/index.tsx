@@ -69,7 +69,7 @@ function Index() {
         <About />
         <WhyChoose />
         <Clients />
-        <Projects />
+        
         <Quality />
         <Fleet />
         <Testimonials />
